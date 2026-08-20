@@ -17,6 +17,10 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/potlatch.png
 tags:
   - Timber
+  - Real-Estate
+  - Wood Products
+tags_raw:
+  - Timber
   - Real Estate
   - Wood Products
 description: >-
@@ -28,6 +32,10 @@ apis:
   - aid: potlatch:potlatch-api
     name: PotlatchDeltic API
     tags:
+      - Timber
+      - Real-Estate
+      - Wood Products
+    tags_raw:
       - Timber
       - Real Estate
       - Wood Products
