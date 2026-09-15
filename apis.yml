@@ -23,42 +23,83 @@ accessModel:
   confidence: medium
   source:
   - plans
-  - {url: 'https://www.potlatchdeltic.com', status: 301, note: 'declared website redirects to https://www.rayonier.com/ — a different registrable domain (potlatchdeltic.com -> rayonier.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  - {url: 'https://www.potlatchdeltic.com', status: 301, note: 'declared website redirects to https://www.rayonier.com/ — a different registrable domain (potlatchdeltic.com -> rayonier.com), possible rename or acquisition (probed 2026-09-03, roadmap#169); CONFIRMED 2026-09-14 as the Rayonier merger of equals that closed 2026-01-30'}
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/potlatch.png
+x-type: company
+x-status: absorbed
+x-successor: Rayonier Inc.
+x-successor-repo: all/rayonier
+x-merger-closed: '2026-01-30'
+x-merger-note: >-
+  PotlatchDeltic Corporation (Spokane, Washington; formerly Potlatch Corporation, renamed after the
+  2018 Deltic Timber merger) ceased to exist as an independent public company on 2026-01-30, when its
+  $8.2 billion all-stock merger of equals with Rayonier Inc. closed. Rayonier shareholders hold roughly
+  54% and former PotlatchDeltic stockholders roughly 46% of the combined company; Rayonier CEO Mark
+  McHugh leads it and PotlatchDeltic CEO Eric Cremers is executive chairman. The board elected to
+  retain the Rayonier name and the NYSE ticker RYN. This profile is retained as a historical record;
+  the live entity is catalogued at all/rayonier.
+x-domain-status: successor-redirect
+x-domain-note: >-
+  potlatchdeltic.com is still registered and still controlled by the successor (GoDaddy, Cloudflare
+  nameservers cloe/james.ns.cloudflare.com, created 2017-10-23, registry expiry 2027-10-23) but the
+  apex and www now answer a blanket HTTP 301 to https://www.rayonier.com/ on EVERY path, including
+  every /.well-known/ path, /openapi.json, /apis.json and /llms.txt. Four legacy subdomains are still
+  live behind Cloudflare and each returns a clean HTTP 404 on every discovery path:
+  customer.potlatchdeltic.com (customer login), supplier.potlatchdeltic.com (log-and-fiber supplier
+  login), rlms.potlatchdeltic.com (Recreational Lease Management System) and
+  woodproducts.potlatchdeltic.com (wood-products marketing). See well-known/potlatch-well-known.yml.
+x-removed-hosts-note: >-
+  An earlier bulk pass carried a fabricated "PotlatchDeltic API" entry with baseURL
+  https://api.potlatchdeltic.com, humanURL https://developer.potlatchdeltic.com and a Documentation
+  pointer at https://developer.potlatchdeltic.com/docs. Probed 2026-09-14: BOTH hosts return DNS
+  NOERROR with zero A/AAAA records — they have never existed — and curl returns exit 6 / status 000.
+  The entry and all three pointers were removed rather than left to rot as a claim we were making on
+  the company's behalf. PotlatchDeltic never operated a developer program.
 tags:
   - Timber
   - Real-Estate
   - Wood Products
+  - Forest-Products
+  - REIT
+  - Lumber
+  - Land-Management
+  - Manufacturing
+  - Company
+  - Absorbed
 tags_raw:
   - Timber
   - Real Estate
   - Wood Products
+  - Forest Products
+  - REIT
+  - Lumber
+  - Land Management
+  - Manufacturing
+  - Company
+  - Absorbed
 description: >-
-  PotlatchDeltic is a major US corporation and Fortune 1000 company. The PotlatchDeltic API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+  PotlatchDeltic Corporation was a Spokane, Washington timberland real estate investment trust and
+  diversified wood products manufacturer, formed in 2018 when Potlatch Corporation — a company whose
+  roots reach back to the 1903 Potlatch Lumber Company in Idaho — merged with Deltic Timber
+  Corporation of Arkansas. At the time of its own merger it owned roughly 2.2 million acres of
+  timberland across Alabama, Arkansas, Georgia, Idaho, Louisiana, Minnesota, Mississippi and South
+  Carolina, ran six sawmills and an industrial-grade plywood mill, and operated a rural land sales
+  program and residential and commercial real estate development business in central Arkansas. It
+  traded on Nasdaq as PCH. PotlatchDeltic ceased to exist as an independent company on 30 January
+  2026, when its $8.2 billion all-stock merger of equals with Rayonier Inc. closed; the combined
+  company retained the Rayonier name and the NYSE ticker RYN and holds over four million acres of US
+  timberland. PotlatchDeltic never operated a public developer program: no developer portal, API
+  reference, SDK, package, GitHub organization or machine-readable specification of any kind was ever
+  published. Its integration surface was, and for the surviving legacy portals still is, a set of
+  human login pages for log-and-fiber suppliers, customers and recreational lease holders. The
+  corporate site now redirects wholesale to rayonier.com, so there is no live API surface to catalog.
+  This profile is retained as a historical record; the live entity is catalogued at all/rayonier.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-14'
 specificationVersion: '0.23'
-apis:
-  - aid: potlatch:potlatch-api
-    name: PotlatchDeltic API
-    tags:
-      - Timber
-      - Real-Estate
-      - Wood Products
-    tags_raw:
-      - Timber
-      - Real Estate
-      - Wood Products
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.potlatchdeltic.com
-    humanURL: https://developer.potlatchdeltic.com
-    properties:
-      - url: https://developer.potlatchdeltic.com/docs
-        type: Documentation
-    description: >-
-      The PotlatchDeltic API provides access to platform services and data for enterprise integration and automation.
+apis: []
 common:
   - type: DomainSecurity
     url: security/potlatch-domain-security.yml
@@ -66,6 +107,66 @@ common:
     url: https://www.linkedin.com/company/potlatchdeltic
   - type: Website
     url: https://www.potlatchdeltic.com
+x-pointer-checks:
+  checked: '2026-09-14'
+  results:
+    - url: https://www.potlatchdeltic.com
+      status: 301
+      verdict: live
+      note: >-
+        301s to https://www.rayonier.com/ (HTTP 200), the successor company's own site. Retained as the
+        Website pointer because the domain is still controlled by the provider's successor and the
+        redirect target is a first-party property — unlike the roadmap#56 repurposed-domain pattern.
+    - url: https://www.linkedin.com/company/potlatchdeltic
+      status: 200
+      verdict: live
+      note: Company page still resolves under the PotlatchDeltic vanity slug.
+    - url: https://developer.potlatchdeltic.com/docs
+      status: 0
+      verdict: dead
+      note: >-
+        NXDOMAIN — DNS NOERROR with zero A/AAAA records. Documentation pointer REMOVED this round; it
+        was written by a bulk pass and never corresponded to a page the company served.
+    - url: https://api.potlatchdeltic.com
+      status: 0
+      verdict: dead
+      note: >-
+        NXDOMAIN — DNS NOERROR with zero A/AAAA records. Fabricated baseURL REMOVED this round along
+        with the "PotlatchDeltic API" entry it belonged to.
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    PotlatchDeltic was absorbed into Rayonier Inc. on 2026-01-30 in an $8.2B merger of equals and
+    www.potlatchdeltic.com now answers a blanket HTTP 301 to www.rayonier.com on every path including
+    /openapi.json, /apis.json, /llms.txt and every /.well-known/ path, while the two developer hosts an
+    earlier pass recorded — api.potlatchdeltic.com and developer.potlatchdeltic.com — are NXDOMAIN and
+    the four surviving legacy subdomains are human login portals that 404 every discovery path.
+  evidence:
+    - url: https://www.potlatchdeltic.com/
+      status: 301
+    - url: https://www.potlatchdeltic.com/openapi.json
+      status: 301
+    - url: https://www.potlatchdeltic.com/.well-known/agent-card.json
+      status: 301
+    - url: https://api.potlatchdeltic.com
+      status: 0
+    - url: https://developer.potlatchdeltic.com/docs
+      status: 0
+    - url: https://supplier.potlatchdeltic.com/openapi.json
+      status: 404
+    - url: https://customer.potlatchdeltic.com/.well-known/security.txt
+      status: 404
+    - url: https://rlms.potlatchdeltic.com/.well-known/agent-card.json
+      status: 404
+    - url: https://api.github.com/orgs/potlatchdeltic
+      status: 404
+  checked: '2026-09-14'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-14'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v3

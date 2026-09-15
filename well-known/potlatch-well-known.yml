@@ -1,0 +1,457 @@
+generated: '2026-09-14'
+method: probed
+source: https://www.potlatchdeltic.com/
+name: PotlatchDeltic well-known + contract discovery probe
+description: Negative probe record for PotlatchDeltic. PotlatchDeltic Corporation ceased to exist as an
+  independent company on 2026-01-30, when its $8.2B all-stock merger of equals with Rayonier Inc. closed;
+  the combined company retained the Rayonier name and the NYSE ticker RYN. potlatchdeltic.com is still
+  registered (GoDaddy, Cloudflare nameservers, registry expiry 2027-10-23) and is still controlled by
+  the successor, but www.potlatchdeltic.com now answers a blanket HTTP 301 to https://www.rayonier.com/
+  on EVERY path probed, including every /.well-known/ path and every spec path. Four legacy subdomains
+  survive and are live — customer., supplier., rlms. and woodproducts. — and each is a human login portal
+  or marketing page that returns a clean HTTP 404 on every discovery path. The two hosts an earlier bulk
+  pass wrote into apis.yml, api.potlatchdeltic.com and developer.potlatchdeltic.com, have no DNS records
+  at all and have been removed from the record. NO WellKnown, SecurityTxt, AgentCard, LLMsTxt, OpenAPI,
+  AAuth or MCPServer pointer is emitted from this probe, and none should ever be emitted from it in a
+  later round.
+host_status:
+  registrable_domain: potlatchdeltic.com
+  controlled_by_provider: true
+  disposition: successor-redirect
+  registrar: GoDaddy.com, LLC
+  registrant_organization: Domains By Proxy, LLC
+  domain_created: '2017-10-23'
+  domain_updated: '2022-10-06'
+  domain_expires: '2027-10-23'
+  nameservers:
+  - cloe.ns.cloudflare.com
+  - james.ns.cloudflare.com
+  redirect_target: https://www.rayonier.com/
+  successor:
+    name: Rayonier Inc.
+    ticker: 'NYSE: RYN'
+    merger_closed: '2026-01-30'
+    catalog_repo: all/rayonier
+    source: https://ir.rayonier.com/news/news-details/2026/Rayonier-and-PotlatchDeltic-Announce-Closing-of-Merger-of-Equals/default.aspx
+blanket_301_catch_all: true
+blanket_301_note: Every path probed on www.potlatchdeltic.com and potlatchdeltic.com returned HTTP 301
+  with the identical Location header https://www.rayonier.com/. Treat all of them as misses — there is
+  no origin content on the apex host at all.
+hosts:
+- host: www.potlatchdeltic.com
+  resolves: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/apis.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/aauth-resource.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/ucp.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/acp.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /apis.json
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  - path: /apis.yml
+    status: 301
+    file: null
+    redirect: https://www.rayonier.com/
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 301
+    result: passed
+  hit_count: 0
+  note: Blanket HTTP 301 to https://www.rayonier.com/ on every probed path. Nothing is served from this
+    origin; treat every row as a miss.
+- host: customer.potlatchdeltic.com
+  resolves: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 404
+    result: passed
+  hit_count: 0
+  note: Live legacy customer login portal (classic ASP/.NET behind Cloudflare). Clean 404 on every probed
+    path including the negative control.
+- host: supplier.potlatchdeltic.com
+  resolves: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 404
+    result: passed
+  hit_count: 0
+  note: Live legacy log-and-fiber supplier login portal. Clean 404 on every probed path including the
+    negative control.
+- host: rlms.potlatchdeltic.com
+  resolves: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 404
+    result: passed
+  hit_count: 0
+  note: Live Recreational Lease Management System (ASP.NET WebForms hunting/recreation lease portal).
+    Clean 404 on every probed path including the negative control.
+- host: woodproducts.potlatchdeltic.com
+  resolves: true
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/apis.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+  - path: /.well-known/ucp.json
+    status: 404
+    file: null
+  - path: /.well-known/acp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /apis.json
+    status: 404
+    file: null
+  - path: /apis.yml
+    status: 404
+    file: null
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 404
+    result: passed
+  hit_count: 0
+  note: Live wood-products marketing site. Clean 404 on every probed path including the negative control.
+- host: api.potlatchdeltic.com
+  resolves: false
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/apis.json
+    status: 0
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 0
+    file: null
+  - path: /.well-known/ucp.json
+    status: 0
+    file: null
+  - path: /.well-known/acp.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+  - path: /apis.json
+    status: 0
+    file: null
+  - path: /apis.yml
+    status: 0
+    file: null
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 0
+    result: passed
+  hit_count: 0
+  note: DNS NOERROR with zero A/AAAA records — the host does not exist. It was carried in apis.yml as
+    a baseURL by an earlier bulk pass; no request can be made against it.
+- host: developer.potlatchdeltic.com
+  resolves: false
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/apis.json
+    status: 0
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 0
+    file: null
+  - path: /.well-known/ucp.json
+    status: 0
+    file: null
+  - path: /.well-known/acp.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+  - path: /apis.json
+    status: 0
+    file: null
+  - path: /apis.yml
+    status: 0
+    file: null
+  path_echo_control:
+    path: /.well-known/potlatch-negative-control-7f3ab91c.json
+    status: 0
+    result: passed
+  hit_count: 0
+  note: DNS NOERROR with zero A/AAAA records — the host does not exist. It was carried in apis.yml as
+    a humanURL by an earlier bulk pass; no request can be made against it.
+contract_discovery:
+  note: STEP 0b run 2026-09-14 against every host this record knows. No OpenAPI/Swagger, GraphQL, MCP,
+    AsyncAPI, WSDL, .proto, OGC or agent-card surface exists on any of them.
+  probed_paths:
+  - /openapi.json
+  - /openapi.yaml
+  - /swagger.json
+  - /v1/openapi.json
+  - /api-docs
+  - /docs
+  - /redoc
+  - /graphql
+  - /apis.json
+  - /apis.yml
+  - /llms.txt
+  - /robots.txt
+  - /sitemap.xml
+  result: all 404 on the four live subdomains; all 301-to-rayonier.com on the apex; NXDOMAIN on api. and
+    developer.
+  github_organization:
+    probed:
+    - https://api.github.com/orgs/potlatchdeltic
+    - https://api.github.com/orgs/potlatch-deltic
+    status: 404
+    result: no GitHub organization exists
+  package_registries:
+    npm: registry.npmjs.org search for 'potlatchdeltic' returned 0 packages
+    pypi: pypi.org/pypi/potlatchdeltic/json -> 404
+    result: no first-party client library published on any registry
+  ogc:
+    probed: false
+    reason: no evidence in any baseURL, docs link or prose pointed at WMS/WFS/WCS/WMTS/CSW or an OGC API
+      surface; blind path patterns are explicitly out of bounds
+  wayback:
+    attempted: '2026-09-14'
+    result: Internet Archive CDX API returned an 'Internet Archive services are temporarily offline' page,
+      so the historical record for developer.potlatchdeltic.com could not be checked this round
+pointers_emitted: []
+pointers_note: Zero documents were fetched, so no WellKnown and no SecurityTxt pointer is wired into apis.yml.
+  A recorded absence is valid data; a pointer would assert a surface the provider does not serve.
