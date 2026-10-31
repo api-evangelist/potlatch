@@ -1,4 +1,4 @@
-# PotlatchDeltic (potlatch)
+# PotlatchDeltic
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,23 +64,64 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PotlatchDeltic is a major US corporation and Fortune 1000 company. The PotlatchDeltic API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+> **Acquired or rebranded.** This company was acquired, merged or renamed. Its API, if it still exists, is offered under another name. This profile is kept as a historical record and is not maintained or rated.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/potlatch/refs/heads/main/apis.yml)
+**Status:** absorbed
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+PotlatchDeltic Corporation was a Spokane, Washington timberland real estate investment trust and diversified wood products manufacturer, formed in 2018 when Potlatch Corporation — a company whose roots reach back to the 1903 Potlatch Lumber Company in Idaho — merged with Deltic Timber Corporation of Arkansas. At the time of its own merger it owned roughly 2.2 million acres of timberland across Alabama, Arkansas, Georgia, Idaho, Louisiana, Minnesota, Mississippi and South Carolina, ran six sawmills and an industrial-grade plywood mill, and operated a rural land sales program and residential and commercial real estate development business in central Arkansas. It traded on Nasdaq as PCH. PotlatchDeltic ceased to exist as an independent company on 30 January 2026, when its $8.2 billion all-stock merger of equals with Rayonier Inc. closed; the combined company retained the Rayonier name and the NYSE ticker RYN and holds over four million acres of US timberland. PotlatchDeltic never operated a public developer program: no developer portal, API reference, SDK, package, GitHub organization or machine-readable specification of any kind was ever published. Its integration surface was, and for the surviving legacy portals still is, a set of human login pages for log-and-fiber suppliers, customers and recreational lease holders. The corporate site now redirects wholesale to rayonier.com, so there is no live API surface to catalog. This profile is retained as a historical record; the live entity is catalogued at all/rayonier.
 
-## Tags:
+**Areas:** Timber · Real Estate · Wood Products · Forest Products · REIT · Lumber · Land Management · Manufacturing · Company · Absorbed
 
- - Timber, Real Estate, Wood Products
+## PotlatchDeltic on APIs.io (historical record)
 
-## Timestamps
+Everything profiled for PotlatchDeltic is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/potlatch/](https://apis.io/providers/potlatch/)** — or go straight to one of the APIs or properties below.
 
-- **Created:** 2026-04-19
-- **Modified:** 2026-04-19
+### Published properties
 
-## Maintainers
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-**FN:** Kin Lane
+#### Security (1)
 
-**Email:** kin@apievangelist.com
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Potlatch Domain Security](https://apis.io/security/potlatch/potlatch-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Potlatch Plans Pricing](https://apis.io/plans/potlatch/potlatch-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Potlatch Rate Limits](https://apis.io/rate-limits/potlatch/potlatch-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Potlatch Finops](https://apis.io/finops/potlatch/potlatch-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.potlatchdeltic.com)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as acquired or rebranded, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PotlatchDeltic: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/potlatch/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
